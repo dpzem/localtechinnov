@@ -1,30 +1,77 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
+
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
 // Form from the package 'informed'
-import { Form, Text } from "informted";
+import { Form, Text } from "informed";
 
 class ComponentDemo extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = ({
+      redirect: false
+    });
+  }
+
+  handleClick = () => {
+    this.setState({
+      redirect: true
+    })
+  }
   render() {
+    if (this.state.redirect) {
+      return <Redirect push to="/" />;
+    }
     return (
       <div>
-        <h1> Use this page to demo components: </h1>
-        <h2> A form component using 'informed' </h2>
-        <Form id="login-form">
-          {({ formState }) => (
-            <div>
-              <label htmlFor="employee-number">Employee Number:</label>
-              <Text field="number" id="employee-number" />
-              <button type="submit">Login</button>
-              <label>Values:</label>
-              <code>{JSON.stringify(formState.values)}</code>
-              <label>Touched:</label>
-              <code>{JSON.stringify(formState.touched)}</code>
-            </div>
-          )}
-        </Form>
+        <MuiThemeProvider>
+          <div style={style}>
+            <h1> Use this page to demo components: </h1>
+            <h2> A form example</h2>
+            <TextField
+              hintText="Enter Username"
+              floatingLabelText="Username"
+              onChange={(event, newValue) => {
+                // setUsername(newValue);
+              }}
+            />
+            <br />
+            <TextField
+              type="password"
+              hintText="Enter Password"
+              floatingLabelText="Password"
+              onChange={(event, newValue) => {
+                // setPassword(newValue);
+              }}
+              onKeyPress={(event) => {
+                if (event.key === 'Enter') {
+                  this.handleClick();
+                }
+              }}
+            />
+            <br />
+            <Link to="/">
+              <RaisedButton
+                label="Login"
+                primary={true}
+                style={style}
+              />
+            </Link>
+          </div>
+        </MuiThemeProvider>
       </div>
     );
   }
 }
+
+const style = {
+  margin: 15,
+};
 
 export default ComponentDemo;
