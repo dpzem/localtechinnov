@@ -9,6 +9,7 @@ import SideDrawer from "./Components/SideDrawer/sidedrawer";
 import Home from "./Views/Home";
 import Login from "./Views/Login";
 import MeetingRoomFinder from "./Views/MeetingRoomFinder";
+import DataVis from "./Views/DataVis";
 
 import "./styles.css";
 
@@ -53,6 +54,7 @@ class App extends Component {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/meeting-room-finder" component={MeetingRoomFinder} />
+          <Route path="/DataVis" component={DataVis} />
           <Route exact path="/" component={Home} />
         </Switch>
       </div>
