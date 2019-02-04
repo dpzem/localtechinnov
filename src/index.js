@@ -9,6 +9,10 @@ import SideDrawer from "./Components/SideDrawer/sidedrawer";
 import Home from "./Views/Home";
 import Login from "./Views/Login";
 import MeetingRoomFinder from "./Views/MeetingRoomFinder";
+import Locations from "./Views/Locations";
+import AtOffice from "./Views/AtOffice";
+import OnSite from "./Views/OnSite";
+import Options from "./Views/Options";
 
 import "./styles.css";
 
@@ -54,6 +58,10 @@ class App extends Component {
           <Route path="/login" component={Login} />
           <Route path="/meeting-room-finder" component={MeetingRoomFinder} />
           <Route exact path="/" component={Home} />
+          <Route path="/locations" component={Locations} />
+          <Route path="/atoffice" component={AtOffice} />
+          <Route path="/onsite" component={OnSite} />
+          <Route path="/options" component={Options} />
         </Switch>
       </div>
     );

@@ -3,9 +3,9 @@ import Button from "@material-ui/core/Button";
 
 const myButton = props => {
   return (
-    <div>
+    <span>
       <Button color="primary">{props.label}</Button>
-    </div>
+    </span>
   );
 };
 

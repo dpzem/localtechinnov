@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Button from "../Components/Button/button";
+import Text from "../Components/Text/text";
 import { Doughnut } from "react-chartjs-2";
 
 let data = {
@@ -33,6 +34,7 @@ class Login extends Component {
     return (
       <div>
         <h1> Login </h1>
+        <Text onClick={this.toggleData} />
         <Button label="login" onClick={this.toggleData} />
         <Doughnut data={data} />
       </div>
