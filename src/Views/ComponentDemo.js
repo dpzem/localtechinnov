@@ -65,6 +65,7 @@ class ComponentDemo extends Component {
             </Link>
           </div>
         </MuiThemeProvider>
+        <p> HI </p>
       </div>
     );
   }
