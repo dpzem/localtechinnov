@@ -5,6 +5,7 @@ import CheckD from "../Components/Check/checkDate";
 import Dropdown from "../Components/Dropdown/dropdown";
 import Button from "../Components/Button/button";
 
+
 class Options extends Component {
   render() {
     return (
@@ -14,13 +15,11 @@ class Options extends Component {
           <p1> Set work from home days</p1>
           <br />
           <br />
-          <p align="right">
             <CheckD />
-          </p>
           <br />
         </center>
         <Dropdown />
-        <p>Set default location:</p>
+        <p style={{margin: '50px'}}>Set default location:</p>
         <br />
         <br />
         <Dropdown />
