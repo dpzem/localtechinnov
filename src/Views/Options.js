@@ -14,11 +14,13 @@ class Options extends Component {
           <p1> Set work from home days</p1>
           <br />
           <br />
-          <p align="right"> <CheckD /> </p>          
+          <p align="right">
+            <CheckD />
+          </p>
           <br />
         </center>
         <Dropdown />
-        <p margin-left: 2.5em;>Set default location:</p>
+        <p>Set default location:</p>
         <br />
         <br />
         <Dropdown />
@@ -26,9 +28,12 @@ class Options extends Component {
         <Dropdown />
         <Dropdown />
         <Dropdown />
-        <Checkbox label="show me as busy"/>
+        <Checkbox label="show me as busy" />
         <Checkbox label="Allow reminders?" />
-        <p align = "right"> <Button label="Save Options"/> </p>
+        <p align="right">
+          {" "}
+          <Button label="Save Options" />{" "}
+        </p>
       </div>
     );
   }
