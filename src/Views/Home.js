@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+
 import Button from "../Components/Button/button";
 
 class Home extends Component {
@@ -13,7 +15,7 @@ class Home extends Component {
           <br />
           <br />
           <Button label="Log location" onClick={this.toggleData} />
-          <Button label="Find Team" onClick={this.toggleData} ne />
+          <Button label="Find Team" onClick={this.toggleData} />
           <Button label="Options" onClick={this.toggleData} />
         </center>
       </div>

@@ -12,18 +12,15 @@ import FavoriteBorder from "@material-ui/icons/FavoriteBorder";
 
 const styles = {
   top: 0,
-  middle: 0,
-
+  left: 0,
   root: {
-    top: 0,
-    left: 20,
     color: green[600],
     "&$checked": {
       color: green[500]
     }
   },
   formGroup: {
-    display: 'block',
+    display: "block"
   },
   checked: {}
 };

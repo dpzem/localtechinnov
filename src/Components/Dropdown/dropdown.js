@@ -13,10 +13,7 @@ import Select from "@material-ui/core/Select";
 
 const styles = theme => ({
   root: {
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "center",
-    justifyContent: "center"
+    display: "block"
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -29,7 +26,7 @@ const styles = theme => ({
 
 class SimpleSelect extends React.Component {
   state = {
-    recuring: ""
+    age: ""
   };
 
   componentDidMount() {
@@ -61,7 +58,7 @@ class SimpleSelect extends React.Component {
             input={
               <OutlinedInput
                 labelWidth={this.state.labelWidth}
-                name="recuring"
+                name="age"
                 id="outlined-age-simple"
               />
             }

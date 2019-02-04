@@ -10,7 +10,7 @@ import Home from "./Views/Home";
 import Login from "./Views/Login";
 import MeetingRoomFinder from "./Views/MeetingRoomFinder";
 import Locations from "./Views/Locations";
-import AtOffice from "./Views/AtOffice";
+import InOffice from "./Views/InOffice";
 import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
@@ -62,7 +62,7 @@ class App extends Component {
           <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
           <Route path="/locations" component={Locations} />
-          <Route path="/atoffice" component={AtOffice} />
+          <Route path="/inoffice" component={InOffice} />
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
         </Switch>

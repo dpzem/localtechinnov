@@ -47,6 +47,38 @@ const sideDrawer = () => {
             <ListItemText primary="Data Visualisation" />
           </ListItem>
         </NavLink>
+        <NavLink to="/inoffice">
+          <ListItem button key="in office">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="In Office" />
+          </ListItem>
+        </NavLink>
+        <NavLink to="/options">
+          <ListItem button key="options">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="options" />
+          </ListItem>
+        </NavLink>
+        <NavLink to="/onsite">
+          <ListItem button key="on site">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="on site" />
+          </ListItem>
+        </NavLink>
+        <NavLink to="/locations">
+          <ListItem button key="locatios">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="locations" />
+          </ListItem>
+        </NavLink>
       </List>
     </div>
   );

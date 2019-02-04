@@ -17,6 +17,9 @@ const styles = {
       color: green[500]
     }
   },
+  formGroup: {
+    display: "block"
+  },
   checked: {}
 };
 
@@ -33,7 +36,7 @@ class CheckboxLabels extends React.Component {
     const { classes } = this.props;
 
     return (
-      <FormGroup column>
+      <FormGroup className={classes.formGroup}>
         <FormControlLabel
           control={
             <Checkbox
