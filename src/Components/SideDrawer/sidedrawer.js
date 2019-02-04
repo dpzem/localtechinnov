@@ -39,6 +39,14 @@ const sideDrawer = () => {
             <ListItemText primary="Meeting Room Finder" />
           </ListItem>
         </NavLink>
+        <NavLink to="/DataVis">
+          <ListItem button key="DataVis">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="Data Visualisation" />
+          </ListItem>
+        </NavLink>
       </List>
     </div>
   );

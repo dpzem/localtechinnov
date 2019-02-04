@@ -13,6 +13,8 @@ import Locations from "./Views/Locations";
 import AtOffice from "./Views/AtOffice";
 import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
+import DataVis from "./Views/DataVis";
+import ComponentDemo from "./Views/ComponentDemo";
 
 import "./styles.css";
 
@@ -31,7 +33,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("HI");
     return (
       <div>
         <CssBaseline />
@@ -57,6 +58,8 @@ class App extends Component {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/meeting-room-finder" component={MeetingRoomFinder} />
+          <Route path="/DataVis" component={DataVis} />
+          <Route path="/component-demo" component={ComponentDemo} />
           <Route exact path="/" component={Home} />
           <Route path="/locations" component={Locations} />
           <Route path="/atoffice" component={AtOffice} />
