@@ -1,19 +1,32 @@
 import React, { Component } from "react";
 import Button from "../Components/Button/button";
-
+import { NavLink } from "react-router-dom";
+import myImage from "../Assets/Pictures/Pacific-RGB.png";
 class Locations extends Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          backgroundImage: "url(" + myImage + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: 700
+        }}
+      >
         <center>
-          <h1> location </h1>
-          <p1> where are you working today?</p1>
           <br />
           <br />
+          <h1> Where are you working today?</h1>
           <br />
-          <Button label="at office" onClick={this.toggleData} />
-          <Button label="from home" onClick={this.toggleData} />
-          <Button label="On Site" onClick={this.toggleData} />
+          <NavLink to="/InOffice" style={{ textDecoration: "none" }}>
+            <Button label="Office" onClick={this.toggleData} />
+          </NavLink>
+          <br />
+          <Button label="Home" onClick={this.toggleData} /> <br />
+          <NavLink to="/OnSite" style={{ textDecoration: "none" }}>
+            <Button label="Out of office" onClick={this.toggleData} />
+          </NavLink>
         </center>
       </div>
     );

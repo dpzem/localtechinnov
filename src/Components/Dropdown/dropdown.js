@@ -43,15 +43,13 @@ class SimpleSelect extends React.Component {
     const { classes } = this.props;
     return (
       <form className={classes.root} autoComplete="off">
-        <FormControl variant="outlined" className={classes.formControl}>
+        <FormControl variant="filled" className={classes.formControl}>
           <InputLabel
             ref={ref => {
               this.InputLabelRef = ref;
             }}
             htmlFor="outlined-age-simple"
-          >
-            Set recuring
-          </InputLabel>
+          />
           <Select
             value={this.state.age}
             onChange={this.handleChange}
@@ -63,9 +61,6 @@ class SimpleSelect extends React.Component {
               />
             }
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
             <MenuItem value={10}>Ten</MenuItem>
             <MenuItem value={20}>Twenty</MenuItem>
             <MenuItem value={30}>Thirty</MenuItem>
