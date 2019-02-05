@@ -1,10 +1,19 @@
 import React, { Component } from "react";
 import Button from "../Components/Button/button";
+import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
 class OnSite extends Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          backgroundImage: "url(" + myImage + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: 700
+        }}
+      >
         <center>
           <h1> On Site </h1>
           <p1> How long will you be onsite until </p1>
