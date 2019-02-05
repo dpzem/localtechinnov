@@ -9,6 +9,7 @@ import Search from "../Components/Search/search";
 import Icon from "../Components/Icon/icon";
 
 import "/src/styles.css";
+import telstraLogo from "../Assets/Pictures/Logo.png";
 
 class Home extends Component {
   render() {
@@ -22,6 +23,15 @@ class Home extends Component {
           height: 700
         }}
       >
+        <img
+          src={telstraLogo}
+          style={{
+            height: 90,
+            width: 80,
+            margin: 10
+          }}
+        />
+
         <center>
           <br /> <br />
           <h1>People Finder</h1>

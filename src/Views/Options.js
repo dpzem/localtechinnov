@@ -5,6 +5,7 @@ import CheckD from "../Components/Check/checkDate";
 import Dropdown from "../Components/Dropdown/dropdown";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
+import telstraLogo from "../Assets/Pictures/Logo.png";
 
 class Options extends Component {
   render() {
@@ -15,9 +16,18 @@ class Options extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 800
+          height: 2000
         }}
       >
+        <img
+          src={telstraLogo}
+          style={{
+            height: 90,
+            width: 80,
+            margin: 10
+          }}
+        />
+
         <center>
           <br />
           <h1> Options </h1>
