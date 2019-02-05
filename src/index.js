@@ -15,6 +15,7 @@ import OnSite from "./Views/OnSite";
 import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
+import find from "./Views/find";
 
 import "./styles.css";
 
@@ -65,6 +66,7 @@ class App extends Component {
           <Route path="/inoffice" component={InOffice} />
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
+          <Route path="/find" component={find} />
         </Switch>
       </div>
     );

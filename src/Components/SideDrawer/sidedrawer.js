@@ -79,6 +79,14 @@ const sideDrawer = () => {
             <ListItemText primary="locations" />
           </ListItem>
         </NavLink>
+        <NavLink to="/find">
+          <ListItem button key="find">
+            <ListItemIcon>
+              <DeskIcon />
+            </ListItemIcon>
+            <ListItemText primary="find" />
+          </ListItem>
+        </NavLink>
       </List>
     </div>
   );

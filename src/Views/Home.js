@@ -23,7 +23,7 @@ class Home extends Component {
             <Button label="Log location" onClick={this.toggleData} />
           </NavLink>
           <br />
-          <NavLink to="/locations" style={{ textDecoration: "none" }}>
+          <NavLink to="/find" style={{ textDecoration: "none" }}>
             <Button label="Find Team" onClick={this.toggleData} />
           </NavLink>
           <br />
