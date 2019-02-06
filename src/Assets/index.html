@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .container {
+        position: relative;
+        content: ".";
+        visibility: hidden;
+        display: block;
+        clear: both;
+        font-size: 0; 
+    }
+    .circle {
+        position: absolute;
+        background-color: grey;
+        opacity: 0.5;
+        border-radius:50%;
+    }
+    .circle:hover {
+        background-color: orange;
+        opacity: 0.9;
+        border:2px solid orange;    
+        border-radius:50%;
+    }
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <img id="floorplan" src="floorplans/level6.png">
+</div>
+</body>
+</html>
+<script>
+
+window.onload = function() {
+    
+    var imgWidth = $("#floorplan").width();
+    var imgHeight = $("#floorplan").height();
+    var circleRadius = imgHeight/11;
+    var styleString =   '<style>.container{height:'+imgHeight+'px; width: '+imgWidth+'px;}.circle {height:'+circleRadius+'px; width: '+circleRadius+'px;}</style>';
+
+    $('head').append(styleString);
+
+    var seatClusters = [{left:0.26, top:0.045, id:1}, {left:0.41, top:0.045, id:2}, {left:0.548, top:0.045, id:3}, {left:0.7, top:0.045, id:4}, {left:0.85, top:0.045, id:5}, {left:0.24, top:0.14, id:6}, {left:0.372, top:0.14, id:7}, {left:0.583, top:0.145, id:8}, {left:0.733, top:0.145, id:9}, {left:0.865, top:0.142, id:10}, {left:0.19, top:0.3, id:11}, {left:0.91, top:0.3, id:12}, {left:0.043, top:0.579, id:13}, {left:0.136, top:0.579, id:14}, {left:0.043, top:0.675, id:15}, {left:0.136, top:0.675, id:16}, {left:0.038, top:0.795, id:17}, {left:0.11, top:0.795, id:18}, {left:0.18, top:0.837, id:19}, {left:0.822, top:0.82, id:20}, {left:0.93, top:0.805, id:21}, {left:0.038, top:0.895, id:22}, {left:0.11, top:0.895, id:23}, {left:0.822, top:0.911, id:24}, {left:0.93, top:0.893, id:25}]
+    var i;
+    var htmlText = '';
+
+    console.log("IMG W"+imgWidth);
+    console.log("IMG H"+imgHeight);
+
+    for (i = 0; i < seatClusters.length; i++) { 
+        //console.log(i);
+        var leftAlign = seatClusters[i].left*imgWidth;
+        var topAlign= seatClusters[i].top*imgHeight;
+
+        if (imgWidth <300){
+
+            leftAlign = leftAlign*1.05;
+            topAlign= topAlign*1.05;
+
+        }
+        //console.log(leftAlign);
+        //console.log(topAlign);
+        htmlText += '<div id="circle'+seatClusters[i].id+'" class="circle" style="left:'+leftAlign+'px; top:'+topAlign+'px"></div>';
+
+    }
+
+    console.log(htmlText);
+    document.getElementById('container').insertAdjacentHTML('beforeend', htmlText);
+
+    var id;
+
+    $(document).ready(function(){
+        
+        $(document).on('mouseover', '.circle', function(e) {
+            id = $(e.target).attr('id');
+            console.log(id);
+            $('#'+id+'').html(id);
+        });
+        $('.circle').mouseout(function(){
+            $('.circle').empty();
+        });
+
+    });
+
+$(window).bind('resize', function(e)
+{
+  console.log('window resized..');
+  this.location.reload(false); /* false to get page from cache */
+  /* true to fetch page from server */
+});
+};
+
+</script>
