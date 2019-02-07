@@ -23,14 +23,6 @@ const sideDrawer = () => {
             <ListItemText primary="Home" />
           </ListItem>
         </NavLink>
-        <NavLink to="/login">
-          <ListItem button key="Login">
-            <ListItemIcon>
-              <DeskIcon />
-            </ListItemIcon>
-            <ListItemText primary="Login" />
-          </ListItem>
-        </NavLink>
         <NavLink to="/meeting-room-finder">
           <ListItem button key="Room">
             <ListItemIcon>
@@ -48,7 +40,7 @@ const sideDrawer = () => {
           </ListItem>
         </NavLink>
         <NavLink to="/inoffice">
-          <ListItem button key="in office">
+          <ListItem button key="In Office">
             <ListItemIcon>
               <DeskIcon />
             </ListItemIcon>
@@ -56,35 +48,35 @@ const sideDrawer = () => {
           </ListItem>
         </NavLink>
         <NavLink to="/options">
-          <ListItem button key="options">
+          <ListItem button key="Options">
             <ListItemIcon>
               <DeskIcon />
             </ListItemIcon>
-            <ListItemText primary="options" />
+            <ListItemText primary="Options" />
           </ListItem>
         </NavLink>
         <NavLink to="/onsite">
-          <ListItem button key="on site">
+          <ListItem button key="On Site">
             <ListItemIcon>
               <DeskIcon />
             </ListItemIcon>
-            <ListItemText primary="on site" />
+            <ListItemText primary="On Site" />
           </ListItem>
         </NavLink>
         <NavLink to="/locations">
-          <ListItem button key="locatios">
+          <ListItem button key="Locations">
             <ListItemIcon>
               <DeskIcon />
             </ListItemIcon>
-            <ListItemText primary="locations" />
+            <ListItemText primary="Locations" />
           </ListItem>
         </NavLink>
         <NavLink to="/find">
-          <ListItem button key="find">
+          <ListItem button key="Find">
             <ListItemIcon>
               <DeskIcon />
             </ListItemIcon>
-            <ListItemText primary="find" />
+            <ListItemText primary="Find" />
           </ListItem>
         </NavLink>
       </List>
