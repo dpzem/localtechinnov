@@ -29,7 +29,7 @@ class Home extends Component {
           <h1>Telstra PinPoint</h1>
           <br />
           <NavLink to="/Locations" style={{ textDecoration: "none" }}>
-            <Button label="Log location" onClick={this.toggleData} />
+            <Button label="Log Location" onClick={this.toggleData} />
           </NavLink>
           <br />
           <NavLink to="/find" style={{ textDecoration: "none" }}>

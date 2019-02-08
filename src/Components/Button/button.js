@@ -15,8 +15,8 @@ const styles = theme => ({
     padding: "6px 12px",
     border: "1px solid",
     lineHeight: 1.5,
-    backgroundColor: "#025450 ",
-    borderColor: "#025450 ",
+    backgroundColor: "#0 ",
+    borderColor: "#0 ",
     fontFamily: [
       "-apple-system",
       "BlinkMacSystemFont",
