@@ -12,7 +12,7 @@ class AtOffice extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 7000
+          height: "100vh"
         }}
       >
         <img

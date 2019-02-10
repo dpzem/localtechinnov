@@ -12,6 +12,11 @@ const style = {
   boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
 };
 
+const divStyle = {
+  display: "flex",
+  alignItems: "center"
+};
+
 class MeetingRoomFinder extends Component {
   state = {
     filter: "",
@@ -72,6 +77,8 @@ class MeetingRoomFinder extends Component {
               placeholder="Search for a Team Member"
             />
           </center>
+        </div>
+        <div style={divStyle}>
           {filteredData.map(item => (
             <div key={item.name}>
               <div>

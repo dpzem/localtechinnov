@@ -12,7 +12,7 @@ class OnSite extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 700
+          height: "100vh"
         }}
       >
         <img

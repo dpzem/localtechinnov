@@ -16,7 +16,7 @@ class Options extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: 2000
+          height: "100vh"
         }}
       >
         <img
