@@ -1,20 +1,31 @@
-import React from 'react'
+import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
-import Paper from '@material-ui/core/Paper';
-
+import Paper from "@material-ui/core/Paper";
 
 let data = {
   datasets: [
     {
-      label: "Number of Days",
-      data: [16, 10, 23, 13, 29],
-      backgroundColor: [
-        "rgba(255, 78, 132, 0.8)",
-        "rgba(54, 162, 246, 0.8)",
-        "rgba(255, 206, 0, 0.8)",
-        "rgba(128, 0, 120, 0.8)",
-        "rgba(0, 128, 0, 0.8)"
-      ],
+      label: "In The Office",
+      data: [78.5, 10, 23, 13, 29],
+      backgroundColor: "rgba(0, 255, 0, 0.5)",
+      borderWidth: 2,
+      borderColor: "#777",
+      hoverBorderWidth: 3,
+      hoverBorderColor: "#000"
+    },
+    {
+      label: "Working From Home",
+      data: [8.3, 10, 23, 13, 29],
+      backgroundColor: "rgba(0, 0, 255, 0.5)",
+      borderWidth: 2,
+      borderColor: "#777",
+      hoverBorderWidth: 3,
+      hoverBorderColor: "#000"
+    },
+    {
+      label: "Out Of Office",
+      data: [13.2, 10, 23, 13, 29],
+      backgroundColor: "rgba(255, 0, 0, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
       hoverBorderWidth: 3,
@@ -24,7 +35,7 @@ let data = {
   labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 };
 
-export default ( {styles }) =>
+export default ({ styles }) => (
   <Paper style={styles.Paper}>
     <Bar
       data={data}
@@ -38,7 +49,15 @@ export default ( {styles }) =>
               ticks: {
                 beginAtZero: true,
                 min: 0,
-                max: 50,
+                max: 100,
+                fontSize: 14,
+                callback: function(value) {
+                  return value + "%";
+                }
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Percentage of Team",
                 fontSize: 14
               }
             }
@@ -46,7 +65,7 @@ export default ( {styles }) =>
           xAxes: [
             {
               ticks: {
-                fontSize: 16,
+                fontSize: 20,
                 fontFamily: "Calibri",
                 fontStyle: "Bold"
               }
@@ -55,13 +74,13 @@ export default ( {styles }) =>
         },
         title: {
           display: true,
-          text: "How many days did my team work from home this month?",
+          text: "Team Location (Average over Last 30 Days)",
           fontFamily: "Calibri",
           fontSize: 25,
           fontColor: "#359"
         },
         legend: {
-          display: false
+          display: true
         },
         layout: {
           padding: {
@@ -72,3 +91,4 @@ export default ( {styles }) =>
       }}
     />
   </Paper>
+);
