@@ -7,7 +7,7 @@ class DataVis extends Component {
   render (){
     return (
       <div>
-        < Charts
+        < Charts/>
       </div>
     )
   }
