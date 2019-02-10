@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import Input from "@material-ui/core/Input";
+import GridList from "@material-ui/core/GridList";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import GridListTile from "@material-ui/core/GridListTile";
 
 const style = {
   background: "white",
@@ -31,7 +34,7 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Julia Zhang",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Ajinkya Khairnar",
@@ -39,7 +42,7 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Jacky Li",
-        location: "Home"
+        location: "Leave"
       },
       {
         name: "Karina Lee",
@@ -47,6 +50,42 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Emily Lok",
+        location: "Home"
+      },
+      {
+        name: "Joshua Sim",
+        location: "Home"
+      },
+      {
+        name: "Ange Leslie",
+        location: "Home"
+      },
+      {
+        name: "Tanmai Khairnar",
+        location: "Home"
+      },
+      {
+        name: "Luke Myatt",
+        location: "Home"
+      },
+      {
+        name: "Sang Mai",
+        location: "Home"
+      },
+      {
+        name: "Chris Smith",
+        location: "Home"
+      },
+      {
+        name: "Shivani",
+        location: "Home"
+      },
+      {
+        name: "Zac Perillo",
+        location: "Home"
+      },
+      {
+        name: "Khoa Tran",
         location: "Home"
       }
     ]
@@ -78,16 +117,20 @@ class MeetingRoomFinder extends Component {
             />
           </center>
         </div>
-        <div style={divStyle}>
-          {filteredData.map(item => (
-            <div key={item.name}>
-              <div>
-                <Button label={item.name} />
+        <br /> <br />
+        <br />
+        <center>
+          <GridList cellHeight={100} cols={4}>
+            {filteredData.map(item => (
+              <div key={item.name}>
+                <div>
+                  <Button label={item.name} />
+                </div>
+                <div />
               </div>
-              <div />
-            </div>
-          ))}
-        </div>
+            ))}
+          </GridList>
+        </center>
       </div>
     );
   }

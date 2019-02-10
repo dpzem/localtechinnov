@@ -15,6 +15,7 @@ import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
 import find from "./Views/find";
+import mail from "./Views/mails";
 
 import "./styles.css";
 
