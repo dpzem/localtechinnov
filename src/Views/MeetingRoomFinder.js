@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Button from "../Components/Button/button";
 import Input from "@material-ui/core/Input";
 import GridList from "@material-ui/core/GridList";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import GridListTile from "@material-ui/core/GridListTile";
+import myImage from "../Assets/Pictures/Pacific-RGB.png";
+import Button from "../Components/Button/button";
+import telstraLogo from "../Assets/Pictures/Logo.png";
 
 const style = {
   background: "white",
@@ -104,8 +106,26 @@ class MeetingRoomFinder extends Component {
       );
     });
     return (
-      <div>
-        <h1> Meeting Room Finder </h1>
+      <div
+        style={{
+          backgroundImage: "url(" + myImage + ")",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          height: "100vh"
+        }}
+      >
+        <img
+          src={telstraLogo}
+          style={{
+            height: 90,
+            width: 80,
+            margin: 10
+          }}
+        />
+        <center>
+          <h1> Where is my Team? </h1>
+        </center>
         <div>
           <center>
             <Input
