@@ -6,7 +6,7 @@ let data = {
   datasets: [
     {
       label: "In The Office",
-      data: [78.5, 10, 23, 13, 29],
+      data: [78.5, 68.3, 72.4, 64.7, 48.2],
       backgroundColor: "rgba(0, 255, 0, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
@@ -15,7 +15,7 @@ let data = {
     },
     {
       label: "Working From Home",
-      data: [8.3, 10, 23, 13, 29],
+      data: [8.3, 9.2, 12.3, 15.6, 30.2],
       backgroundColor: "rgba(0, 0, 255, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
@@ -24,7 +24,7 @@ let data = {
     },
     {
       label: "Out Of Office",
-      data: [13.2, 10, 23, 13, 29],
+      data: [13.2, 22.5, 15.3, 19.7, 21.6],
       backgroundColor: "rgba(255, 0, 0, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
@@ -49,8 +49,9 @@ export default ({ styles }) => (
               ticks: {
                 beginAtZero: true,
                 min: 0,
-                max: 100,
-                fontSize: 14,
+                fontStyle: "Bold",
+                fontFamily: "Calibri",
+                fontSize: 12,
                 callback: function(value) {
                   return value + "%";
                 }
@@ -58,14 +59,16 @@ export default ({ styles }) => (
               scaleLabel: {
                 display: true,
                 labelString: "Percentage of Team",
-                fontSize: 14
+                fontStyle: "Bold",
+                fontFamily: "Calibri",
+                fontSize: 16
               }
             }
           ],
           xAxes: [
             {
               ticks: {
-                fontSize: 20,
+                fontSize: 16,
                 fontFamily: "Calibri",
                 fontStyle: "Bold"
               }
@@ -74,10 +77,11 @@ export default ({ styles }) => (
         },
         title: {
           display: true,
-          text: "Team Location (Average over Last 30 Days)",
+          text: "On average, where does my team work from?",
           fontFamily: "Calibri",
-          fontSize: 25,
-          fontColor: "#359"
+          fontSize: 23,
+          fontColor: "#359",
+          padding: 10
         },
         legend: {
           display: true
