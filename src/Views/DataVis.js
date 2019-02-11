@@ -1,17 +1,14 @@
 import React, { Component } from "react";
-import Grid from '@material-ui/core/Grid'
-
-import Charts from '../Components/Charts'
+import Charts from "../Components/Charts";
 
 class DataVis extends Component {
-  render (){
+  render() {
     return (
       <div>
-        < Charts/>
+        <Charts />
       </div>
-    )
+    );
   }
 }
 
 export default DataVis;
-

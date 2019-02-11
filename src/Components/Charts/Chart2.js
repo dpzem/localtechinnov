@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
-import Paper from '@material-ui/core/Paper';
+import Paper from "@material-ui/core/Paper";
 
 let data2 = {
   datasets: [
@@ -22,7 +22,7 @@ let data2 = {
   labels: ["Area 1", "Area 2", "Area 3", "Area 4"]
 };
 
-export default ({ styles }) =>
+export default ({ styles }) => (
   <Paper style={styles.Paper}>
     <Pie
       data={data2}
@@ -52,3 +52,4 @@ export default ({ styles }) =>
       }}
     />
   </Paper>
+);
