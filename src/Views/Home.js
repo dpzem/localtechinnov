@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div
         style={{
-          backgroundImage: "url(" + myImage + ")",
+          backgroundColor: "#EAE5E1",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
