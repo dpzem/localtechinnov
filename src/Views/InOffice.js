@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import telstraLogo from "../Assets/Pictures/Logo.png";
+import floorplan from "../Assets/Pictures/level7.jpg";
 
 class AtOffice extends Component {
   render() {
@@ -27,9 +28,27 @@ class AtOffice extends Component {
           <br /> <br />
           <h1> Where in the office are you?</h1>
           <br />
-          <Button label="Location 1" onClick={this.toggleData} />
-          <Button label="Location 2" onClick={this.toggleData} />
-          <Button label="Location 3" onClick={this.toggleData} />
+          <div
+            style={{
+              position: "relative",
+              content: ".",
+              display: "block",
+              clear: "both",
+              fontSize: 0
+            }}
+          >
+            <img
+              src={floorplan}
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+                height: "70%",
+                width: "70%",
+                border: "3px solid",
+                margin: 10
+              }}
+            />
+          </div>
         </center>
       </div>
     );
