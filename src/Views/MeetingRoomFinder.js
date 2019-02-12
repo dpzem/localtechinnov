@@ -5,7 +5,6 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import GridListTile from "@material-ui/core/GridListTile";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
-import telstraLogo from "../Assets/Pictures/Logo.png";
 import Tooltip from "@material-ui/core/Tooltip";
 
 const style = {
@@ -116,15 +115,10 @@ class MeetingRoomFinder extends Component {
           height: "100vh"
         }}
       >
-        <img
-          src={telstraLogo}
-          style={{
-            height: 90,
-            width: 80,
-            margin: 10
-          }}
-        />
+
         <center>
+        <br /> <br />
+
           <h1> Where is my Team? </h1>
         </center>
         <div>
@@ -134,7 +128,7 @@ class MeetingRoomFinder extends Component {
               disableUnderline={true}
               value={filter}
               onChange={this.handleChange}
-              placeholder="Search for a Team Member"
+              placeholder="Search for a team member"
             />
           </center>
         </div>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import { NavLink } from "react-router-dom";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
-import telstraLogo from "../Assets/Pictures/Logo.png";
 class Locations extends Component {
   render() {
     return (
@@ -15,14 +14,6 @@ class Locations extends Component {
           height: "100vh"
         }}
       >
-        <img
-          src={telstraLogo}
-          style={{
-            height: 90,
-            width: 80,
-            margin: 10
-          }}
-        />
         <center>
           <br />
           <br />
