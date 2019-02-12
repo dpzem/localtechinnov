@@ -9,11 +9,11 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 const style = {
   background: "white",
-  borderRadius: 3,
+  borderRadius: 9,
   border: 0,
   color: "black",
   height: 48,
-  padding: "0 60px",
+  padding: "0 70px",
   boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)"
 };
 
@@ -36,7 +36,7 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Julia Zhang",
-        location: "Office"
+        location: "Home"
       },
       {
         name: "Ajinkya Khairnar",
@@ -44,51 +44,51 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Jacky Li",
-        location: "Leave"
+        location: "Office"
       },
       {
         name: "Karina Lee",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Emily Lok",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Joshua Sim",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Ange Leslie",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Tanmai Khairnar",
-        location: "Home"
+        location: "Office"
       },
       {
         name: "Luke Myatt",
-        location: "Home"
+        location: "OnSite"
       },
       {
         name: "Sang Mai",
-        location: "Home"
+        location: "OnSite"
       },
       {
         name: "Chris Smith",
-        location: "Home"
+        location: "OnSite"
       },
       {
         name: "Shivani",
-        location: "Home"
+        location: "Leave"
       },
       {
         name: "Zac Perillo",
-        location: "Home"
+        location: "Leave"
       },
       {
         name: "Khoa Tran",
-        location: "Home"
+        location: "Leave"
       }
     ]
   };
@@ -115,10 +115,8 @@ class MeetingRoomFinder extends Component {
           height: "100vh"
         }}
       >
-
         <center>
-        <br /> <br />
-
+          <br /> <br />
           <h1> Where is my Team? </h1>
         </center>
         <div>
@@ -128,23 +126,25 @@ class MeetingRoomFinder extends Component {
               disableUnderline={true}
               value={filter}
               onChange={this.handleChange}
-              placeholder="Search for a team member"
+              placeholder="Search for team member"
             />
           </center>
         </div>
         <br /> <br />
         <br />
         <center>
-          <GridList cellHeight={100} cols={4}>
-            {filteredData.map(item => (
-              <div key={item.name}>
-                <div>
-                  <Button label={item.name} />
-                </div>
-                <div />
+          {filteredData.map(item => (
+            <div key={item.name}>
+              <div>
+                {item.location === "Home" && (
+                  <GridList cellHeight={80} cols={1}>
+                    <Button label={item.name} />
+                  </GridList>
+                )}
               </div>
-            ))}
-          </GridList>
+              <div />
+            </div>
+          ))}
         </center>
       </div>
     );
