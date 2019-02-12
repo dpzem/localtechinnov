@@ -8,7 +8,7 @@ import Button from "../Components/Button/button";
 import Search from "../Components/Search/search";
 import Icon from "../Components/Icon/icon";
 
-import "/src/styles.css";
+import "../styles.css";
 import telstraLogo from "../Assets/Pictures/Logo.png";
 
 class Home extends Component {

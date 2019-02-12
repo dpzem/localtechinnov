@@ -1,5 +1,16 @@
+
+@font-face {
+  font-family: TelstraAkkurat;
+  src: url('./Assets/Fonts/akkurat-light.woff')
+}
+
+@font-face {
+  font-family: gravur;
+  src: url('./Assets/Fonts/gravur.woff')
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: TelstraAkkurat;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -12,6 +23,10 @@
 h1 {
   color: white;
   padding: 0;
-  font-family: "Franklin Gothic Medium";
+  font-family: TelstraAkkurat;
   font-size: 2.5em;
+}
+
+span {
+  font-family: gravur;
 }

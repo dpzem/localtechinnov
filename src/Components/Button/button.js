@@ -17,18 +17,6 @@ const styles = theme => ({
     lineHeight: 1.5,
     backgroundColor: "#0 ",
     borderColor: "#0 ",
-    fontFamily: [
-      "-apple-system",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Roboto",
-      '"Helvetica Neue"',
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
-    ].join(","),
     "&:hover": {
       backgroundColor: "#0069d9",
       borderColor: "#0062cc"
