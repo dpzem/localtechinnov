@@ -15,6 +15,8 @@ import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
 import find from "./Views/find";
+import DefaultLocation from "./Views/DefaultLocation";
+import SetDefaultLocation from "./Views/SetDefaultLocation";
 
 import "./styles.css";
 
@@ -65,6 +67,8 @@ class App extends Component {
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
           <Route path="/find" component={find} />
+          <Route path="/DefaultLocation" component={DefaultLocation} />
+          <Route path="/SetDefaultLocation" component={SetDefaultLocation} />
         </Switch>
       </div>
     );

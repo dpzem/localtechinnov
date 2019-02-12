@@ -10,6 +10,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
+import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
@@ -17,7 +18,7 @@ const styles = theme => ({
   },
   formControl: {
     margin: theme.spacing.unit,
-    minWidth: 120
+    minWidth: 125
   },
   selectEmpty: {
     marginTop: theme.spacing.unit
@@ -61,9 +62,13 @@ class SimpleSelect extends React.Component {
               />
             }
           >
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>VIC</MenuItem>
+            <MenuItem value={20}>NSW</MenuItem>
+            <MenuItem value={30}>QLD</MenuItem>
+            <MenuItem value={30}>SA</MenuItem>
+            <MenuItem value={30}>TAS</MenuItem>
+            <MenuItem value={30}>WA</MenuItem>
+            <MenuItem value={30}>NT</MenuItem>
           </Select>
         </FormControl>
       </form>
