@@ -6,6 +6,7 @@ import GridListTile from "@material-ui/core/GridListTile";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import Tooltip from "@material-ui/core/Tooltip";
+import Grid from "@material-ui/core/Grid";
 
 const style = {
   background: "white",
@@ -44,11 +45,11 @@ class MeetingRoomFinder extends Component {
       },
       {
         name: "Jacky Li",
-        location: "Office"
+        location: "Home"
       },
       {
         name: "Karina Lee",
-        location: "Office"
+        location: "Home"
       },
       {
         name: "Emily Lok",
@@ -112,7 +113,7 @@ class MeetingRoomFinder extends Component {
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          height: "100vh"
+          height: "100%"
         }}
       >
         <center>
@@ -133,18 +134,68 @@ class MeetingRoomFinder extends Component {
         <br /> <br />
         <br />
         <center>
-          {filteredData.map(item => (
-            <div key={item.name}>
-              <div>
-                {item.location === "Home" && (
-                  <GridList cellHeight={80} cols={1}>
-                    <Button label={item.name} />
-                  </GridList>
-                )}
-              </div>
-              <div />
-            </div>
-          ))}
+          <div style={{ display: "flex" }}>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+            >
+              {filteredData.map(item => (
+                <div key={item.name}>
+                  <div>
+                    {item.location === "Home" && <Button label={item.name} />}
+                  </div>
+                  <div />
+                </div>
+              ))}
+            </Grid>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+            >
+              {filteredData.map(item => (
+                <div key={item.name}>
+                  <div>
+                    {item.location === "Office" && <Button label={item.name} />}
+                  </div>
+                  <div />
+                </div>
+              ))}
+            </Grid>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+            >
+              {filteredData.map(item => (
+                <div key={item.name}>
+                  <div>
+                    {item.location === "OnSite" && <Button label={item.name} />}
+                  </div>
+                  <div />
+                </div>
+              ))}
+            </Grid>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+            >
+              {filteredData.map(item => (
+                <div key={item.name}>
+                  <div>
+                    {item.location === "Leave" && <Button label={item.name} />}
+                  </div>
+                  <div />
+                </div>
+              ))}
+            </Grid>
+          </div>
         </center>
       </div>
     );
