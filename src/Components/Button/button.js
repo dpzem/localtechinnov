@@ -10,13 +10,27 @@ const styles = theme => ({
   },
   bootstrapRoot: {
     boxShadow: "none",
+    color: "#fff",
     textTransform: "none",
     fontSize: 20,
     padding: "6px 12px",
-    border: "1px solid",
+    border: "2px solid",
     lineHeight: 1.5,
-    backgroundColor: "#0 ",
-    borderColor: "#0 ",
+    backgroundColor: "transparent",
+    borderColor: "#fff ",
+    borderRadius: "100px",
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"'
+    ].join(","),
     "&:hover": {
       backgroundColor: "#0069d9",
       borderColor: "#0062cc"
@@ -39,7 +53,7 @@ function CustomizedButtons(props) {
     <div>
       <Button
         variant="contained"
-        color="primary"
+        color="none"
         disableRipple
         style={{
           minWidth: 200,
