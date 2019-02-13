@@ -5,8 +5,8 @@ import Paper from "@material-ui/core/Paper";
 let data = {
   datasets: [
     {
-      label: "Percentage of Working Days",
-      data: [78.5, 68.3, 72.4, 64.7, 48.2],
+      label: "Number of Annual Leave Days",
+      data: [58, 12, 10, 13, 11, 8, 9, 17, 13, 15, 18, 32],
       backgroundColor: "rgba(0, 0, 255, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
@@ -15,18 +15,18 @@ let data = {
     }
   ],
   labels: [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
+    "January '19",
+    "December '18",
+    "November '18",
+    "October '18",
+    "September '18",
+    "August '18",
+    "July '18",
+    "June '18",
+    "May '18",
+    "April '18",
+    "March '18",
+    "February '18"
   ]
 };
 
@@ -34,10 +34,9 @@ export default ({ styles }) => (
   <Paper style={styles.Paper}>
     <Bar
       data={data}
-      height="200"
-      width="400"
       options={{
         responsive: true,
+        maintainAspectRatio: true,
         scales: {
           yAxes: [
             {
@@ -46,14 +45,11 @@ export default ({ styles }) => (
                 min: 0,
                 fontStyle: "Bold",
                 fontFamily: "Calibri",
-                fontSize: 12,
-                callback: function(value) {
-                  return value + "%";
-                }
+                fontSize: 12
               },
               scaleLabel: {
                 display: true,
-                labelString: "Percentage of Working Days",
+                labelString: "Number of Days",
                 fontStyle: "Bold",
                 fontFamily: "Calibri",
                 fontSize: 16
@@ -63,7 +59,7 @@ export default ({ styles }) => (
           xAxes: [
             {
               ticks: {
-                fontSize: 16,
+                fontSize: 12,
                 fontFamily: "Calibri",
                 fontStyle: "Bold"
               }
