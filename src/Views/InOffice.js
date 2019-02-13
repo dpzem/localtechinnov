@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import Bubble from "../Components/Bubble/bubble";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
-
 import telstraLogo from "../Assets/Pictures/Logo.png";
 import floorplan from "../Assets/Pictures/level7.jpg";
 
-
 class AtOffice extends Component {
   render() {
-    console.log("test");
-
     return (
       <div
         style={{
@@ -21,33 +17,35 @@ class AtOffice extends Component {
           height: "100%"
         }}
       >
-
-        <img
-          src={telstraLogo}
+        <center
           style={{
-            height: 90,
-            width: 80,
-            margin: 10
+            backgroundImage: "url(" + myImage + ")",
+            backgroundSize: "cover",
+            height: "100vh"
           }}
-          alt="floor plan"
-        />
-
-        <center>
-          <h1> Where in the office are you?</h1>
+        >
           <br />
-
+          <h1> Where in the office are you?</h1>
           <div
             className="imageContainer"
             style={{
               textAlign: "center",
               position: "relative",
               display: "inline-block",
-              maxWidth: "50%",
+              maxWidth: "55%",
+              maxHeight: "55%",
               zoom: 1
             }}
           >
             <div>
-              <Bubble />
+              <Bubble
+                colour="grey"
+                hovercolour="#3f51b5"
+                radius="8%"
+                opacity="0.7"
+                left="28%"
+                top="6.4%"
+              />
               <img
                 src={floorplan}
                 border="3"
@@ -55,12 +53,14 @@ class AtOffice extends Component {
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  maxWidth: "100%"
+                  maxWidth: "100%",
+                  maxHeight: "100%"
                 }}
               />
             </div>
           </div>
         </center>
+
         <br />
       </div>
     );
