@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import Bubble from "../Components/Bubble/bubble";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
+
 import telstraLogo from "../Assets/Pictures/Logo.png";
 import floorplan from "../Assets/Pictures/level7.jpg";
+
 
 class AtOffice extends Component {
   render() {
@@ -19,6 +21,7 @@ class AtOffice extends Component {
           height: "100%"
         }}
       >
+
         <img
           src={telstraLogo}
           style={{
@@ -28,6 +31,7 @@ class AtOffice extends Component {
           }}
           alt="floor plan"
         />
+
         <center>
           <h1> Where in the office are you?</h1>
           <br />

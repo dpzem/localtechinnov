@@ -8,8 +8,7 @@ import Button from "../Components/Button/button";
 import Search from "../Components/Search/search";
 import Icon from "../Components/Icon/icon";
 
-import "/src/styles.css";
-import telstraLogo from "../Assets/Pictures/Logo.png";
+import "../styles.css";
 
 class Home extends Component {
   render() {
@@ -23,14 +22,6 @@ class Home extends Component {
           height: "100vh"
         }}
       >
-        <img
-          src={telstraLogo}
-          style={{
-            height: 90,
-            width: 80,
-            margin: 10
-          }}
-        />
 
         <center>
           <br /> <br />

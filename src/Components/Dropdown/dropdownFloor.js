@@ -62,13 +62,24 @@ class SimpleSelect extends React.Component {
               />
             }
           >
-            <MenuItem value={10}>VIC</MenuItem>
-            <MenuItem value={20}>NSW</MenuItem>
-            <MenuItem value={30}>QLD</MenuItem>
-            <MenuItem value={30}>SA</MenuItem>
-            <MenuItem value={30}>TAS</MenuItem>
-            <MenuItem value={30}>WA</MenuItem>
-            <MenuItem value={30}>NT</MenuItem>
+            <MenuItem value={10}>Level 1</MenuItem>
+            <MenuItem value={20}>Level 2</MenuItem>
+            <MenuItem value={30}>Level 3</MenuItem>
+            <MenuItem value={40}>Level 4</MenuItem>
+            <MenuItem value={50}>Level 5</MenuItem>
+            <MenuItem value={60}>Level 6</MenuItem>
+            <MenuItem value={70}>Level 7</MenuItem>
+            <MenuItem value={80}>Level 8</MenuItem>
+            <MenuItem value={90}>Level 9</MenuItem>
+            <MenuItem value={100}>Level 10</MenuItem>
+            <MenuItem value={120}>Level 11</MenuItem>
+            <MenuItem value={130}>Level 12</MenuItem>
+            <MenuItem value={140}>Level 13</MenuItem>
+            <MenuItem value={150}>Level 14</MenuItem>
+            <MenuItem value={160}>Level 15</MenuItem>
+            <MenuItem value={170}>Level 16</MenuItem>
+            <MenuItem value={180}>Level 17</MenuItem>
+            <MenuItem value={190}>Level 18</MenuItem>
           </Select>
         </FormControl>
       </form>
