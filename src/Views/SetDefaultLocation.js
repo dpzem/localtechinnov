@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Dropdown from "../Components/Dropdown/dropdown";
+import DropdownB from "../Components/Dropdown/dropdownBuilding";
+import DropdownF from "../Components/Dropdown/dropdownFloor";
 import Button from "../Components/Button/button";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
 
@@ -25,9 +27,9 @@ class SetDefaultLocation extends Component {
           State
           <Dropdown />
           Building
-          <Dropdown />
+          <DropdownB />
           Floor
-          <Dropdown />
+          <DropdownF />
         </center>
         <p align="right" style={{ marginRight: "50px" }}>
           <NavLink to="/DefaultLocation" style={{ textDecoration: "none" }}>
