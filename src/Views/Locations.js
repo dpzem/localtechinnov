@@ -23,7 +23,10 @@ class Locations extends Component {
             <Button label="Office" onClick={this.toggleData} />
           </NavLink>
           <br />
-          <Button label="Home" onClick={this.toggleData} /> <br />
+          <NavLink to="/Confirm" style={{ textDecoration: "none" }}>
+            <Button label="Home" onClick={this.toggleData} />
+          </NavLink>
+          <br />
           <NavLink to="/OnSite" style={{ textDecoration: "none" }}>
             <Button label="Out of office" onClick={this.toggleData} />
           </NavLink>
