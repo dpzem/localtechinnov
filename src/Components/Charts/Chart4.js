@@ -1,19 +1,17 @@
-import React from 'react'
+import React from "react";
 import { Bar, Pie } from "react-chartjs-2";
-import Paper from '@material-ui/core/Paper';
-
+import Paper from "@material-ui/core/Paper";
 
 let data = {
   datasets: [
     {
       label: "Number of Days",
-      data: [16, 10, 23, 13, 29],
+      data: [16, 10, 23, 13],
       backgroundColor: [
-        "rgba(255, 78, 132, 0.8)",
-        "rgba(54, 162, 246, 0.8)",
-        "rgba(255, 206, 0, 0.8)",
-        "rgba(128, 0, 120, 0.8)",
-        "rgba(0, 128, 0, 0.8)"
+        "rgba(0, 255, 0, 0.5)",
+        "rgba(255, 0, 0, 0.5)",
+        "rgba(0, 0, 255, 0.5)",
+        "rgba(255, 255, 0, 0.5)"
       ],
       borderWidth: 2,
       borderColor: "#777",
@@ -21,47 +19,25 @@ let data = {
       hoverBorderColor: "#000"
     }
   ],
-  labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  labels: ["Area 1", "Area 2", "Area 3", "Area 4"]
 };
 
-export default ({ styles }) =>
+export default ({ styles }) => (
   <Paper style={styles.Paper}>
-    <Bar
+    <Pie
       data={data}
-      height="200"
-      width="400"
       options={{
         responsive: true,
-        scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-                min: 0,
-                max: 50,
-                fontSize: 14
-              }
-            }
-          ],
-          xAxes: [
-            {
-              ticks: {
-                fontSize: 16,
-                fontFamily: "Calibri",
-                fontStyle: "Bold"
-              }
-            }
-          ]
-        },
+        maintainAspectRatio: true,
         title: {
           display: true,
-          text: "How many days did my team work from home this month?",
+          text: "On average, where was my team seated this month?",
           fontFamily: "Calibri",
           fontSize: 25,
           fontColor: "#359"
         },
         legend: {
-          display: false
+          display: true
         },
         layout: {
           padding: {
@@ -72,3 +48,4 @@ export default ({ styles }) =>
       }}
     />
   </Paper>
+);

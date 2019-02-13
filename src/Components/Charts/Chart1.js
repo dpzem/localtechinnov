@@ -39,10 +39,9 @@ export default ({ styles }) => (
   <Paper style={styles.Paper}>
     <Bar
       data={data}
-      height="200"
-      width="400"
       options={{
         responsive: true,
+        maintainAspectRatio: true,
         scales: {
           yAxes: [
             {
@@ -77,7 +76,7 @@ export default ({ styles }) => (
         },
         title: {
           display: true,
-          text: "Team Location (Average over Last 30 Days)",
+          text: "On average, where does my team work from?",
           fontFamily: "Calibri",
           fontSize: 23,
           fontColor: "#359",

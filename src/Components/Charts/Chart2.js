@@ -1,53 +1,88 @@
 import React from "react";
-import { Bar, Pie } from "react-chartjs-2";
+import { HorizontalBar, Bar, Pie } from "react-chartjs-2";
 import Paper from "@material-ui/core/Paper";
 
-let data2 = {
+let data = {
   datasets: [
     {
-      label: "Number of Days",
-      data: [10, 38, 24, 28],
-      backgroundColor: [
-        "rgba(255, 78, 132, 0.8)",
-        "rgba(54, 162, 246, 0.8)",
-        "rgba(255, 206, 0, 0.8)",
-        "rgba(128, 0, 120, 0.8)"
-      ],
+      label: "Number of Annual Leave Days",
+      data: [58, 12, 10, 13, 11, 8, 9, 17, 13, 15, 18, 32],
+      backgroundColor: "rgba(0, 0, 255, 0.5)",
       borderWidth: 2,
       borderColor: "#777",
       hoverBorderWidth: 3,
       hoverBorderColor: "#000"
     }
   ],
-  labels: ["Area 1", "Area 2", "Area 3", "Area 4"]
+  labels: [
+    "January '19",
+    "December '18",
+    "November '18",
+    "October '18",
+    "September '18",
+    "August '18",
+    "July '18",
+    "June '18",
+    "May '18",
+    "April '18",
+    "March '18",
+    "February '18"
+  ]
 };
 
 export default ({ styles }) => (
   <Paper style={styles.Paper}>
-    <Pie
-      data={data2}
-      height="200"
-      width="400"
+    <Bar
+      data={data}
       options={{
         responsive: true,
+        maintainAspectRatio: true,
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                fontStyle: "Bold",
+                fontFamily: "Calibri",
+                fontSize: 12
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Number of Days",
+                fontStyle: "Bold",
+                fontFamily: "Calibri",
+                fontSize: 16
+              }
+            }
+          ],
+          xAxes: [
+            {
+              ticks: {
+                fontSize: 12,
+                fontFamily: "Calibri",
+                fontStyle: "Bold"
+              }
+            }
+          ]
+        },
         title: {
           display: true,
-          text: "On average, where was my team seated this month?",
+          text:
+            "How many days of Annual Leave has my team taken in the past year?",
           fontFamily: "Calibri",
-          fontSize: 25,
-          fontColor: "#359"
+          fontSize: 20,
+          fontColor: "#359",
+          padding: 10
         },
         legend: {
-          display: true,
-          labels: {
-            fontSize: 12,
-            fontFamily: "Calibri"
-          }
+          display: false
         },
-        rotation: 0,
-        animation: {
-          animateRotate: true,
-          animateScale: true
+        layout: {
+          padding: {
+            top: 0,
+            left: 0
+          }
         }
       }}
     />

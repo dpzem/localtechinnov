@@ -28,10 +28,9 @@ export default ({ styles }) => (
   <Paper style={styles.Paper}>
     <Line
       data={data}
-      height="200"
-      width="400"
       options={{
         responsive: true,
+        maintainAspectRatio: true,
         scales: {
           yAxes: [
             {
