@@ -18,12 +18,17 @@ const styles = theme => ({
 function bubble(props) {
   const onMouseOver = event => {
     const el = event.target;
-    el.style.backgroundColor = "orange";
+    el.style.backgroundColor = props.hovercolour;
+    el.style.opacity = 0.9;
+    el.style.height = "" + parseInt(props.radius) * 1.1 + "%";
+    el.style.width = "" + parseInt(props.radius) * 1.1 + "%";
   };
 
   const onMouseOut = event => {
     const el = event.target;
-    el.style.BackgroundColor = "grey";
+    el.style.backgroundColor = props.colour;
+    el.style.height = props.radius;
+    el.style.width = props.radius;
   };
 
   return (

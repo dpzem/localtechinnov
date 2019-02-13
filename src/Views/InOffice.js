@@ -40,6 +40,7 @@ class AtOffice extends Component {
             <div>
               <Bubble
                 colour="grey"
+                hovercolour="#3f51b5"
                 radius="8%"
                 opacity="0.7"
                 left="28%"
