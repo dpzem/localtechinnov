@@ -1,12 +1,12 @@
 import React from "react";
-import { Bar, Pie } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 import Paper from "@material-ui/core/Paper";
 
 let data = {
   datasets: [
     {
       label: "Number of Days",
-      data: [16, 10, 23, 13],
+      data: [24, 43, 15, 18],
       backgroundColor: [
         "rgba(0, 255, 0, 0.5)",
         "rgba(255, 0, 0, 0.5)",
