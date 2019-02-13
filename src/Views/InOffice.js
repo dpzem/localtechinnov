@@ -17,7 +17,13 @@ class AtOffice extends Component {
           height: "100%"
         }}
       >
-        <center>
+        <center
+          style={{
+            backgroundImage: "url(" + myImage + ")",
+            backgroundSize: "cover",
+            height: "100vh"
+          }}
+        >
           <br />
           <h1> Where in the office are you?</h1>
           <div
@@ -26,12 +32,19 @@ class AtOffice extends Component {
               textAlign: "center",
               position: "relative",
               display: "inline-block",
-              maxWidth: "50%",
+              maxWidth: "55%",
+              maxHeight: "55%",
               zoom: 1
             }}
           >
             <div>
-              <Bubble />
+              <Bubble
+                colour="grey"
+                radius="8%"
+                opacity="0.7"
+                left="28%"
+                top="6.4%"
+              />
               <img
                 src={floorplan}
                 border="3"
@@ -39,7 +52,8 @@ class AtOffice extends Component {
                   display: "block",
                   marginLeft: "auto",
                   marginRight: "auto",
-                  maxWidth: "100%"
+                  maxWidth: "100%",
+                  maxHeight: "100%"
                 }}
               />
             </div>
