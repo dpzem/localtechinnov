@@ -141,59 +141,80 @@ class MeetingRoomFinder extends Component {
               justify="center"
               alignItems="center"
             >
-              {filteredData.map(item => (
-                <div key={item.name}>
-                  <div>
-                    {item.location === "Home" && <Button label={item.name} />}
+              <fieldset>
+                <legend>Home</legend>
+                {filteredData.map(item => (
+                  <div key={item.name}>
+                    <div>
+                      {item.location === "Home" && <Button label={item.name} />}
+                    </div>
+                    <div />
                   </div>
-                  <div />
-                </div>
-              ))}
+                ))}
+              </fieldset>
             </Grid>
+
             <Grid
               container
               direction="column"
               justify="center"
               alignItems="center"
             >
-              {filteredData.map(item => (
-                <div key={item.name}>
-                  <div>
-                    {item.location === "Office" && <Button label={item.name} />}
+              <fieldset>
+                <legend>Office</legend>
+                {filteredData.map(item => (
+                  <div key={item.name}>
+                    <div>
+                      {item.location === "Office" && (
+                        <Button label={item.name} />
+                      )}
+                    </div>
+                    <div />
                   </div>
-                  <div />
-                </div>
-              ))}
+                ))}
+              </fieldset>
             </Grid>
+
             <Grid
               container
               direction="column"
               justify="center"
               alignItems="center"
             >
-              {filteredData.map(item => (
-                <div key={item.name}>
-                  <div>
-                    {item.location === "OnSite" && <Button label={item.name} />}
+              <fieldset>
+                <legend>Out of office</legend>
+                {filteredData.map(item => (
+                  <div key={item.name}>
+                    <div>
+                      {item.location === "OnSite" && (
+                        <Button label={item.name} />
+                      )}
+                    </div>
+                    <div />
                   </div>
-                  <div />
-                </div>
-              ))}
+                ))}
+              </fieldset>
             </Grid>
+
             <Grid
               container
               direction="column"
               justify="center"
               alignItems="center"
             >
-              {filteredData.map(item => (
-                <div key={item.name}>
-                  <div>
-                    {item.location === "Leave" && <Button label={item.name} />}
+              <fieldset>
+                <legend>Leave</legend>
+                {filteredData.map(item => (
+                  <div key={item.name}>
+                    <div>
+                      {item.location === "Leave" && (
+                        <Button label={item.name} />
+                      )}
+                    </div>
+                    <div />
                   </div>
-                  <div />
-                </div>
-              ))}
+                ))}
+              </fieldset>
             </Grid>
           </div>
         </center>

@@ -1,12 +1,11 @@
-
 @font-face {
   font-family: TelstraAkkurat;
-  src: url('./Assets/Fonts/akkurat-light.woff')
+  src: url("./Assets/Fonts/akkurat-light.woff");
 }
 
 @font-face {
   font-family: gravur;
-  src: url('./Assets/Fonts/gravur.woff')
+  src: url("./Assets/Fonts/gravur.woff");
 }
 
 .App {
@@ -39,8 +38,8 @@ p1 {
 
 img {
   display: block;
-  max-width:230px;
-  max-height:250px;
+  max-width: 230px;
+  max-height: 250px;
   width: auto;
   height: auto;
 }
