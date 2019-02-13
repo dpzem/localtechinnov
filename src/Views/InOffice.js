@@ -2,15 +2,11 @@ import React, { Component } from "react";
 import Button from "../Components/Button/button";
 import Bubble from "../Components/Bubble/bubble";
 import myImage from "../Assets/Pictures/Pacific-RGB.png";
-
 import telstraLogo from "../Assets/Pictures/Logo.png";
 import floorplan from "../Assets/Pictures/level7.jpg";
 
-
 class AtOffice extends Component {
   render() {
-    console.log("test");
-
     return (
       <div
         style={{
@@ -21,21 +17,9 @@ class AtOffice extends Component {
           height: "100%"
         }}
       >
-
-        <img
-          src={telstraLogo}
-          style={{
-            height: 90,
-            width: 80,
-            margin: 10
-          }}
-          alt="floor plan"
-        />
-
         <center>
-          <h1> Where in the office are you?</h1>
           <br />
-
+          <h1> Where in the office are you?</h1>
           <div
             className="imageContainer"
             style={{
@@ -61,6 +45,7 @@ class AtOffice extends Component {
             </div>
           </div>
         </center>
+
         <br />
       </div>
     );
