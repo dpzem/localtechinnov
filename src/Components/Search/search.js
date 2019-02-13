@@ -12,6 +12,7 @@ import DirectionsIcon from "@material-ui/icons/Directions";
 const styles = {
   root: {
     padding: "2px 4px",
+    borderRadius: "100px",
     display: "flex",
     alignItems: "center",
     width: 400

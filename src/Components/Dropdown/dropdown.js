@@ -14,7 +14,8 @@ import Paper from "@material-ui/core/Paper";
 
 const styles = theme => ({
   root: {
-    display: "block"
+    display: "block",
+    borderRadius: "100px"
   },
   formControl: {
     margin: theme.spacing.unit,
