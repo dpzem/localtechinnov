@@ -110,10 +110,10 @@ class MeetingRoomFinder extends Component {
       <div
         style={{
           backgroundImage: "url(" + myImage + ")",
+          height: "100vh",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: "100%"
+          backgroundRepeat: "no-repeat"
         }}
       >
         <center>
