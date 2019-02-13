@@ -20,19 +20,18 @@ const NavBar = props => {
                         aria-label="Menu"
                         onClick={props.onClick}>
 
-                        <MenuIcon/>
+                      <img
+                        className='pull-right'
+                        src={telstraLogo}
+                        style={{
+                          height: 30,
+                          width: 25,
+                      }} />
 
                     </IconButton>
 
                     <div>
-                        <img
-                          className='pull-right'
-                            src={telstraLogo}
-                            style={{
-                            height: 45,
-                            width: 40,
-                            margin: 10
-                        }}/>
+                        
                     </div>
                 </Toolbar>
             </AppBar>
