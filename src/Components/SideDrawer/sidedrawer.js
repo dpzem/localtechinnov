@@ -8,6 +8,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import DeskIcon from "@material-ui/icons/DesktopMac";
 import RoomIcon from "@material-ui/icons/MeetingRoom";
 import HomeIcon from "@material-ui/icons/Home";
+import WorkIcon from "@material-ui/icons/Work";
+import GraphIcon from "@material-ui/icons/GraphicEq";
+import MenuIcon from "@material-ui/icons/Menu";
+import LocationIcon from "@material-ui/icons/NotListedLocation";
+import DirectionIcon from "@material-ui/icons/DirectionsWalk";
+import SearchIcon from "@material-ui/icons/LocationSearching";
 
 import classes from "./sidedrawer.modules.css";
 
@@ -34,7 +40,7 @@ const sideDrawer = () => {
         <NavLink to="/DataVis">
           <ListItem button key="DataVis">
             <ListItemIcon>
-              <DeskIcon />
+              <GraphIcon />
             </ListItemIcon>
             <ListItemText primary="Data Visualisation" />
           </ListItem>
@@ -42,7 +48,7 @@ const sideDrawer = () => {
         <NavLink to="/inoffice">
           <ListItem button key="In Office">
             <ListItemIcon>
-              <DeskIcon />
+              <WorkIcon />
             </ListItemIcon>
             <ListItemText primary="In Office" />
           </ListItem>
@@ -50,7 +56,7 @@ const sideDrawer = () => {
         <NavLink to="/options">
           <ListItem button key="Options">
             <ListItemIcon>
-              <DeskIcon />
+              <MenuIcon />
             </ListItemIcon>
             <ListItemText primary="Options" />
           </ListItem>
@@ -58,7 +64,7 @@ const sideDrawer = () => {
         <NavLink to="/onsite">
           <ListItem button key="On Site">
             <ListItemIcon>
-              <DeskIcon />
+              <DirectionIcon />
             </ListItemIcon>
             <ListItemText primary="On Site" />
           </ListItem>
@@ -66,7 +72,7 @@ const sideDrawer = () => {
         <NavLink to="/locations">
           <ListItem button key="Locations">
             <ListItemIcon>
-              <DeskIcon />
+              <LocationIcon />
             </ListItemIcon>
             <ListItemText primary="Locations" />
           </ListItem>
@@ -74,7 +80,7 @@ const sideDrawer = () => {
         <NavLink to="/find">
           <ListItem button key="Find">
             <ListItemIcon>
-              <DeskIcon />
+              <SearchIcon />
             </ListItemIcon>
             <ListItemText primary="Find" />
           </ListItem>

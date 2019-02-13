@@ -62,13 +62,9 @@ class SimpleSelect extends React.Component {
               />
             }
           >
-            <MenuItem value={10}>VIC</MenuItem>
-            <MenuItem value={20}>NSW</MenuItem>
-            <MenuItem value={30}>QLD</MenuItem>
-            <MenuItem value={30}>SA</MenuItem>
-            <MenuItem value={30}>TAS</MenuItem>
-            <MenuItem value={30}>WA</MenuItem>
-            <MenuItem value={30}>NT</MenuItem>
+            <MenuItem value={10}>180 Londale Street</MenuItem>
+            <MenuItem value={20}>242 Exhibition Street</MenuItem>
+            <MenuItem value={30}>150 Londale Street</MenuItem>
           </Select>
         </FormControl>
       </form>

@@ -10,22 +10,33 @@ import telstraLogo from "../../Assets/Pictures/Logo.png";
 import classes from "./navbar.modules.css";
 
 const NavBar = props => {
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Menu"
-            onClick={props.onClick}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+    return (
+        <div className={classes.root}>
+            <AppBar position="static">
+                <Toolbar>
+                    <IconButton
+                        className={classes.menuButton}
+                        color="inherit"
+                        aria-label="Menu"
+                        onClick={props.onClick}>
+
+                      <img
+                        className='pull-right'
+                        src={telstraLogo}
+                        style={{
+                          height: 30,
+                          width: 25,
+                      }} />
+
+                    </IconButton>
+
+                    <div>
+                        
+                    </div>
+                </Toolbar>
+            </AppBar>
+        </div>
+    );
 };
 
 export default NavBar;

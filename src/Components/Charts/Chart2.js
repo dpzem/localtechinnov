@@ -1,5 +1,5 @@
 import React from "react";
-import { HorizontalBar, Bar } from "react-chartjs-2";
+import { HorizontalBar, Bar, Pie } from "react-chartjs-2";
 import Paper from "@material-ui/core/Paper";
 
 let data = {

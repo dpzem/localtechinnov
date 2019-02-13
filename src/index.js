@@ -15,10 +15,11 @@ import Options from "./Views/Options";
 import DataVis from "./Views/DataVis";
 import ComponentDemo from "./Views/ComponentDemo";
 import find from "./Views/find";
-import mail from "./Views/mails";
+import DefaultLocation from "./Views/DefaultLocation";
+import SetDefaultLocation from "./Views/SetDefaultLocation";
 
 import "./styles.css";
-
+// Hello
 class App extends Component {
   constructor(props) {
     super(props);
@@ -66,6 +67,8 @@ class App extends Component {
           <Route path="/onsite" component={OnSite} />
           <Route path="/options" component={Options} />
           <Route path="/find" component={find} />
+          <Route path="/DefaultLocation" component={DefaultLocation} />
+          <Route path="/SetDefaultLocation" component={SetDefaultLocation} />
         </Switch>
       </div>
     );
