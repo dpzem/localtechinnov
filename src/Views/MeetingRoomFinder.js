@@ -7,6 +7,8 @@ import myImage from "../Assets/Pictures/Pacific-RGB.png";
 import Button from "../Components/Button/button";
 import Tooltip from "@material-ui/core/Tooltip";
 import Grid from "@material-ui/core/Grid";
+import { Container, Row, Col } from 'react-grid-system';
+
 
 const style = {
   background: "white",
@@ -110,12 +112,13 @@ class MeetingRoomFinder extends Component {
       <div
         style={{
           backgroundImage: "url(" + myImage + ")",
-          height: "100vh",
+          height: "150vh",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat"
         }}
       >
+      <div>
         <center>
           <br /> <br />
           <h1> Where is my Team? </h1>
@@ -133,16 +136,12 @@ class MeetingRoomFinder extends Component {
         </div>
         <br /> <br />
         <br />
-        <center>
-          <div style={{ display: "flex" }}>
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Home</legend>
+          <div>
+          <center>
+          <Container containerWidths={750}>
+          <fieldset>
+          <legend>Home</legend>
+              <Row>
                 {filteredData.map(item => (
                   <div key={item.name}>
                     <div>
@@ -151,17 +150,12 @@ class MeetingRoomFinder extends Component {
                     <div />
                   </div>
                 ))}
-              </fieldset>
-            </Grid>
-
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
+                </Row>
+                </fieldset>
+                <br/>
+                <fieldset>
                 <legend>Office</legend>
+                <Row>
                 {filteredData.map(item => (
                   <div key={item.name}>
                     <div>
@@ -172,17 +166,13 @@ class MeetingRoomFinder extends Component {
                     <div />
                   </div>
                 ))}
-              </fieldset>
-            </Grid>
+                  </Row>
+                  </fieldset>
+                  <br/>
+                  <fieldset>
+                  <legend>Out of Office</legend>
+                  <Row>
 
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Out of office</legend>
                 {filteredData.map(item => (
                   <div key={item.name}>
                     <div>
@@ -193,17 +183,13 @@ class MeetingRoomFinder extends Component {
                     <div />
                   </div>
                 ))}
-              </fieldset>
-            </Grid>
+                </Row>
+                </fieldset>
+<br/>
+<fieldset>
+<legend>Leave</legend>
+                <Row>
 
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-            >
-              <fieldset>
-                <legend>Leave</legend>
                 {filteredData.map(item => (
                   <div key={item.name}>
                     <div>
@@ -214,10 +200,12 @@ class MeetingRoomFinder extends Component {
                     <div />
                   </div>
                 ))}
-              </fieldset>
-            </Grid>
+                </Row>
+                </fieldset>
+                </Container>
+                </center>
           </div>
-        </center>
+        </div>
       </div>
     );
   }
