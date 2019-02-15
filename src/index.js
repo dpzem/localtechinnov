@@ -17,7 +17,6 @@ import ComponentDemo from "./Views/ComponentDemo";
 import find from "./Views/find";
 import DefaultLocation from "./Views/DefaultLocation";
 import SetDefaultLocation from "./Views/SetDefaultLocation";
-
 import "./styles.css";
 // Hello
 class App extends Component {
